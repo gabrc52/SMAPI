@@ -71,6 +71,8 @@ else
         else
             x-terminal-emulator -e "sh -c 'TERM=xterm $LAUNCHER'"
         fi
+    elif $COMMAND mate-terminal 2>/dev/null; then
+        mate-terminal -e "sh -c 'TERM=xterm $LAUNCHER'"
     elif $COMMAND xfce4-terminal 2>/dev/null; then
         xfce4-terminal -e "sh -c 'TERM=xterm $LAUNCHER'"
     elif $COMMAND gnome-terminal 2>/dev/null; then
